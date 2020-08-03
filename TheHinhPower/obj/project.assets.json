@@ -5349,11 +5349,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower\\TheHinhPower.csproj",
+      "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj",
       "projectName": "TheHinhPower",
-      "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower\\TheHinhPower.csproj",
+      "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj",
       "packagesPath": "C:\\Users\\TUANPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower\\obj\\",
+      "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
