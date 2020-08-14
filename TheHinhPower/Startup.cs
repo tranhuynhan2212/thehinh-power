@@ -12,6 +12,19 @@ using TheHinhPower.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Hangfire;
+using Hangfire.SqlServer;
+using Microsoft.AspNetCore.Http;
+using AutoMapper;
+using TheHinhPower.Data.Entities;
+using TheHinhPower.Data.EF;
+using Microsoft.AspNetCore.Authorization;
+using TheHinhPower.Authorization;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using TheHinhPower.Infrastructure.Interfaces;
+using TheHinhPower.Infrastructure;
+using TheHinhPower.Service.Interfaces;
+using TheHinhPower.Service.Implementation;
 
 namespace TheHinhPower
 {
@@ -27,13 +40,50 @@ namespace TheHinhPower
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
+            // Add Hangfire services.
+            services.AddHangfire(configuration => configuration
+                .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                .UseSimpleAssemblyNameTypeSerializer()
+                .UseRecommendedSerializerSettings()
+                .UseSqlServerStorage(Configuration.GetConnectionString("DefaultConnection"), new SqlServerStorageOptions
+                {
+                    CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+                    SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+                    QueuePollInterval = TimeSpan.Zero,
+                    UseRecommendedIsolationLevel = true,
+                    UsePageLocksOnDequeue = true,
+                    DisableGlobalLocks = true
+                }));
+
+            // Add the processing server as IHostedService
+            services.AddHangfireServer();
+            services.AddMemoryCache();
+            services.AddSession();
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => false;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+
+            services.AddDbContext<AppDBContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+                    Configuration.GetConnectionString("DefaultConnection"), o => o.MigrationsAssembly("ScienceManagement.Data.EF")));
+
+            services.AddIdentity<AppUser, AppRole>()
+                .AddUserManager<UserManager<AppUser>>()
+                //.AddDefaultUI(UIFramework.Bootstrap4)
+                .AddEntityFrameworkStores<AppDBContext>()
+                .AddSignInManager<SignInManager<AppUser>>()
+                .AddDefaultTokenProviders();
+
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddAutoMapper();
+            // Add application services.
+            services.AddScoped<UserManager<AppUser>>();
+            services.AddScoped<RoleManager<AppRole>>();
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -66,6 +116,21 @@ namespace TheHinhPower
                 options.AccessDeniedPath = "/Identity/Account/AccessDenied";
                 options.SlidingExpiration = true;
             });
+            services.AddTransient<DBInitializer>();
+            services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddTransient<IAuthorizationPolicyProvider, FunctionPolicyProvider>();
+            services.AddTransient<IAuthorizationHandler, PermissionRequirementHandler>();
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie();
+            services.AddDistributedMemoryCache();
+
+            services.AddSession();
+            services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
+            services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
+
+            services.AddTransient<IRoleService, RoleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

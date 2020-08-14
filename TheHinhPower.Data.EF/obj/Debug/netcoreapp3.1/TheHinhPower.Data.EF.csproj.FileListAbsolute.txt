@@ -1,0 +1,15 @@
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Data.EF.deps.json
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Data.EF.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\obj\Debug\netcoreapp3.1\TheHinhPower.Data.EF.AssemblyInfoInputs.cache
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\obj\Debug\netcoreapp3.1\TheHinhPower.Data.EF.AssemblyInfo.cs
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Data.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\obj\Debug\netcoreapp3.1\TheHinhPower.Data.EF.csprojAssemblyReference.cache
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Data.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\obj\Debug\netcoreapp3.1\TheHinhPower.Data.EF.csproj.CopyComplete
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Data.EF.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\obj\Debug\netcoreapp3.1\TheHinhPower.Data.EF.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\obj\Debug\netcoreapp3.1\TheHinhPower.Data.EF.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Data.EF.runtimeconfig.json
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data.EF\bin\Debug\netcoreapp3.1\TheHinhPower.Data.EF.runtimeconfig.dev.json

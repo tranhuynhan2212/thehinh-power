@@ -1,0 +1,15 @@
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Service.deps.json
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Service.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\obj\Debug\netcoreapp3.1\TheHinhPower.Service.csprojAssemblyReference.cache
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\obj\Debug\netcoreapp3.1\TheHinhPower.Service.AssemblyInfoInputs.cache
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\obj\Debug\netcoreapp3.1\TheHinhPower.Service.AssemblyInfo.cs
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Data.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Utilities.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Data.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Service.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\bin\Debug\netcoreapp3.1\TheHinhPower.Utilities.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\obj\Debug\netcoreapp3.1\TheHinhPower.Service.csproj.CopyComplete
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\obj\Debug\netcoreapp3.1\TheHinhPower.Service.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Service\obj\Debug\netcoreapp3.1\TheHinhPower.Service.pdb

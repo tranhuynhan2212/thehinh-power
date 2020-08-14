@@ -4,14 +4,180 @@
     "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj": {}
   },
   "projects": {
-    "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj": {
+    "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data.EF\\TheHinhPower.Data.EF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj",
-        "projectName": "TheHinhPower",
-        "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj",
+        "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data.EF\\TheHinhPower.Data.EF.csproj",
+        "projectName": "TheHinhPower.Data.EF",
+        "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data.EF\\TheHinhPower.Data.EF.csproj",
         "packagesPath": "C:\\Users\\TUANPC\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\obj\\",
+        "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data.EF\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TUANPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\TUANPC\\Documents\\LocalNuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data\\TheHinhPower.Data.csproj": {
+                "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data\\TheHinhPower.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data\\TheHinhPower.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data\\TheHinhPower.Data.csproj",
+        "projectName": "TheHinhPower.Data",
+        "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data\\TheHinhPower.Data.csproj",
+        "packagesPath": "C:\\Users\\TUANPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TUANPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\TUANPC\\Documents\\LocalNuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Infrastructure\\TheHinhPower.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Infrastructure\\TheHinhPower.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Infrastructure\\TheHinhPower.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Infrastructure\\TheHinhPower.Infrastructure.csproj",
+        "projectName": "TheHinhPower.Infrastructure",
+        "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Infrastructure\\TheHinhPower.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\TUANPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -43,11 +209,228 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Service\\TheHinhPower.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Service\\TheHinhPower.Service.csproj",
+        "projectName": "TheHinhPower.Service",
+        "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Service\\TheHinhPower.Service.csproj",
+        "packagesPath": "C:\\Users\\TUANPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TUANPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\TUANPC\\Documents\\LocalNuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data\\TheHinhPower.Data.csproj": {
+                "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data\\TheHinhPower.Data.csproj"
+              },
+              "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Utilities\\TheHinhPower.Utilities.csproj": {
+                "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Utilities\\TheHinhPower.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[6.0.2, )"
             },
-            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Utilities\\TheHinhPower.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Utilities\\TheHinhPower.Utilities.csproj",
+        "projectName": "TheHinhPower.Utilities",
+        "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Utilities\\TheHinhPower.Utilities.csproj",
+        "packagesPath": "C:\\Users\\TUANPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TUANPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\TUANPC\\Documents\\LocalNuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj",
+        "projectName": "TheHinhPower",
+        "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\TheHinhPower.csproj",
+        "packagesPath": "C:\\Users\\TUANPC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\TUANPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\TUANPC\\Documents\\LocalNuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data.EF\\TheHinhPower.Data.EF.csproj": {
+                "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Data.EF\\TheHinhPower.Data.EF.csproj"
+              },
+              "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Service\\TheHinhPower.Service.csproj": {
+                "projectPath": "C:\\Users\\TUANPC\\Desktop\\thehinh1\\thehinh-power\\TheHinhPower.Service\\TheHinhPower.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.12, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.12, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.7.12, )"
+            },
+            "Microsoft.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.1, )"
             },
@@ -55,13 +438,29 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.6, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.9.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Settings.Configuration": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [

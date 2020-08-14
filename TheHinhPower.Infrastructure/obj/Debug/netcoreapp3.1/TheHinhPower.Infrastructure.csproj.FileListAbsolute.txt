@@ -1,0 +1,8 @@
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Infrastructure\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.deps.json
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Infrastructure\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Infrastructure\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Infrastructure\obj\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.csprojAssemblyReference.cache
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Infrastructure\obj\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Infrastructure\obj\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.AssemblyInfo.cs
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Infrastructure\obj\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Infrastructure\obj\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.pdb
