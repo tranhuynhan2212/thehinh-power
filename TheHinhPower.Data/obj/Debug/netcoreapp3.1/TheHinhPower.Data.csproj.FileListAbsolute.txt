@@ -1,0 +1,11 @@
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\bin\Debug\netcoreapp3.1\TheHinhPower.Data.deps.json
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\bin\Debug\netcoreapp3.1\TheHinhPower.Data.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\bin\Debug\netcoreapp3.1\TheHinhPower.Data.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\bin\Debug\netcoreapp3.1\TheHinhPower.Infrastructure.pdb
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\obj\Debug\netcoreapp3.1\TheHinhPower.Data.csprojAssemblyReference.cache
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\obj\Debug\netcoreapp3.1\TheHinhPower.Data.AssemblyInfoInputs.cache
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\obj\Debug\netcoreapp3.1\TheHinhPower.Data.AssemblyInfo.cs
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\obj\Debug\netcoreapp3.1\TheHinhPower.Data.csproj.CopyComplete
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\obj\Debug\netcoreapp3.1\TheHinhPower.Data.dll
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Data\obj\Debug\netcoreapp3.1\TheHinhPower.Data.pdb
