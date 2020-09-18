@@ -55,6 +55,8 @@ namespace TheHinhPower
                     DisableGlobalLocks = true
                 }));
 
+
+            
             // Add the processing server as IHostedService
             services.AddHangfireServer();
             services.AddMemoryCache();
@@ -78,20 +80,20 @@ namespace TheHinhPower
                 .AddDefaultTokenProviders();
 
             services.AddControllersWithViews();
-            services.AddRazorPages();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
 
             services.AddAutoMapper();
             // Add application services.
-            services.AddScoped<UserManager<AppUser>>();
-            services.AddScoped<RoleManager<AppRole>>();
+            services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
+            services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
             services.Configure<IdentityOptions>(options =>
             {
                 // Password settings.
                 options.Password.RequireDigit = true;
-                options.Password.RequireLowercase = true;
-                options.Password.RequireNonAlphanumeric = true;
-                options.Password.RequireUppercase = true;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
                 options.Password.RequiredLength = 6;
                 options.Password.RequiredUniqueChars = 1;
 
@@ -109,21 +111,45 @@ namespace TheHinhPower
             services.ConfigureApplicationCookie(options =>
             {
                 // Cookie settings
-                options.Cookie.HttpOnly = true;
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                //options.Cookie.HttpOnly = true;
+                //options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
-                options.LoginPath = "/Identity/Account/Login";
-                options.AccessDeniedPath = "/Identity/Account/AccessDenied";
-                options.SlidingExpiration = true;
+                //options.LoginPath = "/Identity/Account/Login";
+                //options.AccessDeniedPath = "/Identity/Account/AccessDenied";
+                //options.SlidingExpiration = true;
+
+                options.ExpireTimeSpan = TimeSpan.FromDays(6);
+                options.LoginPath = new PathString("/admin/login/");
+                options.AccessDeniedPath = new PathString("/Admin/Login");
+                options.Events = new CookieAuthenticationEvents
+                {
+                    OnRedirectToLogin = ctx =>
+                    {
+                        var requestPath = ctx.Request.Path;
+                        if (requestPath.StartsWithSegments("/Admin"))
+                        {
+                            ctx.Response.Redirect("/Admin/login?ReturnUrl=" + requestPath + ctx.Request.QueryString);
+                        }
+                        else
+                        {
+                            ctx.Response.Redirect("/Login?ReturnUrl=" + requestPath + ctx.Request.QueryString);
+                        }
+                        return Task.CompletedTask;
+                    }
+                };
             });
             services.AddTransient<DBInitializer>();
+            //services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
             services.AddScoped<IMapper>(sp => new Mapper(sp.GetRequiredService<AutoMapper.IConfigurationProvider>(), sp.GetService));
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddTransient<IAuthorizationPolicyProvider, FunctionPolicyProvider>();
-            services.AddTransient<IAuthorizationHandler, PermissionRequirementHandler>();
+            //services.AddTransient<IAuthorizationPolicyProvider, FunctionPolicyProvider>();
+            //services.AddTransient<IAuthorizationHandler, PermissionRequirementHandler>();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie();
+                .AddCookie(options =>
+                {
+                    options.LoginPath = "/Admin/Login/Index";
+                });
             services.AddDistributedMemoryCache();
 
             services.AddSession();
@@ -160,7 +186,11 @@ namespace TheHinhPower
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapRazorPages();
+                    //pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(
+                    name: "areaRoute",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
+            endpoints.MapRazorPages();
             });
         }
     }

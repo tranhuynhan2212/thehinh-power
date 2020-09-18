@@ -45,15 +45,18 @@ namespace TheHinhPower.Data.EF
             }
             if (!_userManager.Users.Any())
             {
-                await _userManager.CreateAsync(new AppUser()
+                 await _userManager.CreateAsync(new AppUser()
                 {
                     UserName = "admin",
                     FullName = "Administrator",
+                    PhoneNumber = "234234",
                     Email = "admin@gmail.com",
                     Status = Status.Active,
                 }, "123456");
                 var user = await _userManager.FindByNameAsync("admin");
                 await _userManager.AddToRoleAsync(user, "Admin");
+                
+                
             }
             await _context.SaveChangesAsync();
         }

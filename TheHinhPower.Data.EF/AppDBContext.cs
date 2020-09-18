@@ -22,6 +22,7 @@ namespace TheHinhPower.Data.EF
         }
         public DbSet<AppRole> AppRoles { set; get; }
         public DbSet<AppUser> AppUsers { set; get; }
+        public DbSet<Function> Functions { set; get; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             #region Identity Config

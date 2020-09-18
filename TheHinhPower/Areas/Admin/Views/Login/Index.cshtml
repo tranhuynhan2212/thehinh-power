@@ -1,0 +1,115 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Power gym</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/lib/Droopy/favicon.ico" type="image/x-icon">
+
+    <!-- vector map CSS -->
+    <link href="~/lib/Droopy/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/lib/Droopy/bower_components/switchery/dist/switchery.min.css" rel="stylesheet" />
+
+
+
+    <!-- Custom CSS -->
+    <link href="~/lib/Droopy/dist/css/style.css" rel="stylesheet" />
+
+    <link href="~/lib/notifyjs/dist/styles/metro/notify-metro.css" rel="stylesheet" />
+</head>
+<body>
+    <!--Preloader-->
+    <div class="preloader-it">
+        <div class="la-anim-1"></div>
+    </div>
+    <!--/Preloader-->
+
+    <div class="wrapper  pa-0">
+        <!-- Main Content -->
+        <div class="page-wrapper pa-0 ma-0 auth-page">
+            <div class="container-fluid">
+                <!-- Row -->
+                <div class="table-struct full-width full-height">
+                    <div class="table-cell vertical-align-middle auth-form-wrap">
+                        <div class="mb-30">
+                            <h1 class="text-center txt-dark mb-10">Gym Power</h1>
+                            <br />
+                        </div>
+                        <div class="auth-form  ml-auto mr-auto no-float">
+                            <div class="row">
+                                <div class="col-sm-12 col-xs-12">
+                                    <div class="form-wrap">
+                                        <form>
+                                            @Html.AntiForgeryToken()
+                                            <div class="form-group">
+                                                <label class="control-label mb-10" for="exampleInputEmail_2">Tên đăng nhập</label>
+                                                <input type="email" class="form-control" required="" name="username" id="txtUserName" placeholder="Tên đăng nhập">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="pull-left control-label mb-10" for="exampleInputpwd_2">Mật khẩu</label>
+                                                <input type="password" class="form-control" required="" name="password" id="txtPassword" placeholder="Mật khẩu">
+                                                <a class="capitalize-font txt-primary block mb-10 pull-right font-12" href="/admin/forgotpassword">Quên mật khẩu ?</a>
+                                                <div class="clearfix"></div>
+                                            </div>
+
+                                            <div class="form-group text-center">
+                                                <button type="submit" class="btn btn-success  btn-rounded" id="btnLogin">Đăng nhập</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Row -->
+            </div>
+
+        </div>
+        <!-- /Main Content -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- JavaScript -->
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    @*<script src="~/lib/Droopy/bower_components/jquery/dist/jquery.min.js"></script>*@
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/lib/Droopy/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link href="~/lib/Droopy/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Slimscroll JavaScript -->
+    <script src="~/lib/Droopy/dist/js/jquery.slimscroll.js"></script>
+
+    <!-- Init JavaScript -->
+    <script src="~/lib/Droopy/dist/js/init.js"></script>
+
+
+    <script src="~/lib/notifyjs/dist/styles/metro/notify-metro.js"></script>
+    <script src="~/lib/notifyjs/dist/notify.js"></script>
+    <script src="~/app/shared/utils.js"></script>
+    
+    <script src="~/app/login/index.js"></script>
+    <script>
+
+        var returnUrl = '@Context.Request.Query["returnurl"].ToString()';
+        var login = new loginController(returnUrl);
+        login.initialize();
+    </script>
+    <script>
+        $(document).ready(function () {
+            function disableBack() { window.history.forward() }
+            window.onload = disableBack();
+            window.onpageshow = function (evt) { if (evt.persisted) disableBack() }
+        });
+    </script>
+</body>
+
+</html>

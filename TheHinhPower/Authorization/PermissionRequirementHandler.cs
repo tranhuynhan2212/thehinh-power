@@ -8,7 +8,7 @@ using TheHinhPower.Service.Interfaces;
 
 namespace TheHinhPower.Authorization
 {
-    public class PermissionRequirementHandler : AuthorizationHandler<PermissionRequirement>
+    public class PermissionRequirementHandler //: AuthorizationHandler<PermissionRequirement>
     {
         private readonly IRoleService _roleService;
         IHttpContextAccessor httpContextAccessor;
@@ -18,26 +18,26 @@ namespace TheHinhPower.Authorization
             this.httpContextAccessor = httpContextAccessor;
         }
 
-        protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, PermissionRequirement requirement)
-        {
-            var roles = (httpContextAccessor.HttpContext.User).Claims.FirstOrDefault(x => x.Type == "Roles");
-            if (roles != null)
-            {
-                var listRole = roles.Value.Split(";");
-                var hasPermission = await _roleService.CheckPermission(requirement.FunctionId, requirement.Action, listRole);
-                if (hasPermission || listRole.Contains("Admin"))
-                {
-                    context.Succeed(requirement);
-                }
-                else
-                {
-                    context.Fail();
-                }
-            }
-            else
-            {
-                context.Fail();
-            }
-        }
+        //protected override async Task HandleRequirementAsync(AuthorizationHandlerContext context, PermissionRequirement requirement)
+        //{
+        //    var roles = (httpContextAccessor.HttpContext.User).Claims.FirstOrDefault(x => x.Type == "Roles");
+        //    if (roles != null)
+        //    {
+        //        var listRole = roles.Value.Split(";");
+        //        var hasPermission = await _roleService.CheckPermission(requirement.FunctionId, requirement.Action, listRole);
+        //        if (hasPermission || listRole.Contains("Admin"))
+        //        {
+        //            context.Succeed(requirement);
+        //        }
+        //        else
+        //        {
+        //            context.Fail();
+        //        }
+        //    }
+        //    else
+        //    {
+        //        context.Fail();
+        //    }
+        //}
     }
 }

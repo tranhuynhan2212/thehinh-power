@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace TheHinhPower.Authorization
 {
-    public class PermissionRequirement : IAuthorizationRequirement
+    public class PermissionRequirement// : IAuthorizationRequirement
     {
-        public string FunctionId { get; }
-        public string Action { get; }
+        //public string FunctionId { get; }
+        //public string Action { get; }
 
-        public PermissionRequirement(string functionId, string action)
-        {
-            FunctionId = functionId;
-            Action = action;
-        }
+        //public PermissionRequirement(string functionId, string action)
+        //{
+        //    FunctionId = functionId;
+        //    Action = action;
+        //}
     }
 }
