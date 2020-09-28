@@ -1,0 +1,21 @@
+﻿@model TheHinhPower.Service.ViewModels.CategoryProductViewModel
+
+<div class="listData" id="loadData">
+    <table id="categoryProductTable" style="width:100%" class="table table-striped table-bordered dt-responsive">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Commission_f1)</th>
+                <th>@Html.DisplayNameFor(model => model.Commission_f2)</th>
+                <th>@Html.DisplayNameFor(model => model.Commission_f3)</th>
+                <th>@Html.DisplayNameFor(model => model.Personal)</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+
+@section Scripts{
+
+    <script src="~/app/categoryProduct/index.js" asp-append-version="true"></script>
+}

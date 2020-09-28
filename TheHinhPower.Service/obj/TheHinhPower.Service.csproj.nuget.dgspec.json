@@ -184,6 +184,10 @@
               "target": "Package",
               "version": "[6.0.2, )"
             },
+            "DatatableHelper": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.6, )"

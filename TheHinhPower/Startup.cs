@@ -25,6 +25,8 @@ using TheHinhPower.Infrastructure.Interfaces;
 using TheHinhPower.Infrastructure;
 using TheHinhPower.Service.Interfaces;
 using TheHinhPower.Service.Implementation;
+using TheHinhPower.Data.IRepositories;
+using TheHinhPower.Data.EF.Repositories;
 
 namespace TheHinhPower
 {
@@ -155,8 +157,12 @@ namespace TheHinhPower
             services.AddSession();
             services.AddTransient(typeof(IUnitOfWork), typeof(EFUnitOfWork));
             services.AddTransient(typeof(IRepository<,>), typeof(EFRepository<,>));
+            services.AddTransient(typeof(IBaseService<,,>), typeof(BaseService<,,>));
 
+            services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IRoleService, RoleService>();
+
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

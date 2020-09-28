@@ -10,7 +10,7 @@ using TheHinhPower.Data.EF;
 namespace TheHinhPower.Data.EF.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20200918024154_initial")]
+    [Migration("20200928024243_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -331,6 +331,47 @@ namespace TheHinhPower.Data.EF.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("TheHinhPower.Data.Entities.CategoryProduct", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Commission_f1")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Commission_f2")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Commission_f3")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Personal")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserCreated")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserModified")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CategoryProducts");
+                });
+
             modelBuilder.Entity("TheHinhPower.Data.Entities.Function", b =>
                 {
                     b.Property<string>("Id")
@@ -382,6 +423,52 @@ namespace TheHinhPower.Data.EF.Migrations
                     b.ToTable("Functions");
                 });
 
+            modelBuilder.Entity("TheHinhPower.Data.Entities.Product", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("CategoryProduct_id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("DateModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserCreated")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("UserModified")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryProduct_id");
+
+                    b.ToTable("Products");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("TheHinhPower.Data.Entities.AppRole", null)
@@ -431,6 +518,13 @@ namespace TheHinhPower.Data.EF.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TheHinhPower.Data.Entities.Product", b =>
+                {
+                    b.HasOne("TheHinhPower.Data.Entities.CategoryProduct", "CategoryProduct")
+                        .WithMany()
+                        .HasForeignKey("CategoryProduct_id");
                 });
 #pragma warning restore 612, 618
         }

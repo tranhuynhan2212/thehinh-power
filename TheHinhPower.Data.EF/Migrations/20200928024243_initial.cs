@@ -124,6 +124,27 @@ namespace TheHinhPower.Data.EF.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CategoryProducts",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    UserCreated = table.Column<Guid>(nullable: false),
+                    UserModified = table.Column<Guid>(nullable: false),
+                    DateCreated = table.Column<DateTime>(nullable: false),
+                    DateModified = table.Column<DateTime>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    Commission_f1 = table.Column<string>(nullable: true),
+                    Commission_f2 = table.Column<string>(nullable: true),
+                    Commission_f3 = table.Column<string>(nullable: true),
+                    Personal = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CategoryProducts", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Functions",
                 columns: table => new
                 {
@@ -251,6 +272,34 @@ namespace TheHinhPower.Data.EF.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Products",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(nullable: false),
+                    UserCreated = table.Column<Guid>(nullable: false),
+                    UserModified = table.Column<Guid>(nullable: false),
+                    DateCreated = table.Column<DateTime>(nullable: false),
+                    DateModified = table.Column<DateTime>(nullable: false),
+                    IsDeleted = table.Column<bool>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    Price = table.Column<decimal>(nullable: false),
+                    Image = table.Column<string>(nullable: true),
+                    description = table.Column<string>(nullable: true),
+                    CategoryProduct_id = table.Column<Guid>(nullable: true),
+                    Status = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Products", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Products_CategoryProducts_CategoryProduct_id",
+                        column: x => x.CategoryProduct_id,
+                        principalTable: "CategoryProducts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -289,6 +338,11 @@ namespace TheHinhPower.Data.EF.Migrations
                 column: "NormalizedUserName",
                 unique: true,
                 filter: "[NormalizedUserName] IS NOT NULL");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CategoryProduct_id",
+                table: "Products",
+                column: "CategoryProduct_id");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -327,10 +381,16 @@ namespace TheHinhPower.Data.EF.Migrations
                 name: "Functions");
 
             migrationBuilder.DropTable(
+                name: "Products");
+
+            migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "CategoryProducts");
         }
     }
 }

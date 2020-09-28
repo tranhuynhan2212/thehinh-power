@@ -5,4 +5,3 @@ C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Utilities\obj\Debug\
 C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Utilities\obj\Debug\netcoreapp3.1\TheHinhPower.Utilities.AssemblyInfo.cs
 C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Utilities\obj\Debug\netcoreapp3.1\TheHinhPower.Utilities.dll
 C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Utilities\obj\Debug\netcoreapp3.1\TheHinhPower.Utilities.pdb
-C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower.Utilities\obj\Debug\netcoreapp3.1\TheHinhPower.Utilities.csprojAssemblyReference.cache

@@ -58,6 +58,18 @@ namespace TheHinhPower.Data.EF
                 
                 
             }
+            if (!_context.CategoryProducts.Any())
+            {
+                List<CategoryProduct> categoryProducts = new List<CategoryProduct>()
+                {
+                    new CategoryProduct("Muối ăn", "12", "8", "5", "10"),
+                    new CategoryProduct("Muối tắm", "8", "5", "3", "10"),
+                    new CategoryProduct("Hộp đặt chân", "5", "3", "2", "10"),
+                    new CategoryProduct("Đá liếm động vật", "5", "3", "2", "10"),
+                    new CategoryProduct("Đèn", "5", "3", "2", "10"),
+                };
+                _context.CategoryProducts.AddRange(categoryProducts);
+            }
             await _context.SaveChangesAsync();
         }
     }
