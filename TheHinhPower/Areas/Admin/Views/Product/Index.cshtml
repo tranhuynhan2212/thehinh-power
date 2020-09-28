@@ -1,0 +1,30 @@
+﻿@model TheHinhPower.Service.ViewModels.ProductViewModel
+
+  
+
+<div class="row">
+    <div class="col col-md-12">
+        <a href="/Admin/Product/AddEdit" style="float:right !important">
+            <button type="button" class="btn btn-primary btn-icon left-icon btn-sm">
+                <i class="fas fa-plus"></i><span>Thêm mới</span>
+            </button>
+        </a>
+    </div>
+</div>
+
+<div class="listData" id="loadData">
+    <table id="productTable" style="width:100%" class="table table-striped table-bordered dt-responsive">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(model => model.Name)</th>
+                <th>@Html.DisplayNameFor(model => model.Price)</th>
+                <th>@Html.DisplayNameFor(model => model.Image)</th>
+                <th>@Html.DisplayNameFor(model => model.description)</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@section Scripts{
+
+    <script src="~/app/product/index.js" asp-append-version="true"></script>
+}

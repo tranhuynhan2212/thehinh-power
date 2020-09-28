@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Quản lý khoa học công nghệ</title>
+
+    <link href="~/lib/datetimepicker/dist/css/datepicker.new.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/datetimepicker/dist/datepicker.css">
+    <link rel="stylesheet" href="~/lib/datetimepicker/dist/datepicker.min.css">
+    @* import fontasome *@
+    <link rel="stylesheet" href="~/lib/fontawesome/css/all.min.css" />
+    <!--Select2-->
+    <link href="~/lib/select2/select2.min.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" href="~/lib/Droopy/favicon.ico" type="image/x-icon">
+    <link href="~/lib/Droopy/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/Droopy/bower_components/jasny-bootstrap/dist/css/jasny-bootstrap.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/lib/Droopy/dist/css/style.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <!--Datatables.net-->
+    <link href="~/lib/datatable/datatables.min.css" rel="stylesheet" />
+
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <!--JQuery-->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+
+    <div class="wrapper  theme-6-active pimary-color-green">
+        @*<partial name="TopMenu" />*@
+        @await Component.InvokeAsync("LeftSideBar")
+        <div class="page-wrapper">
+            <div class="container-fluid" style="padding-right: 0px;padding-left: 0px;">
+                @RenderBody()
+
+                @*<partial name="FooterPartial" />*@
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/lib/Droopy/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Data table JavaScript -->
+    <script src="~/lib/Droopy/bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+
+    <!-- Slimscroll JavaScript -->
+    <script src="~/lib/Droopy/dist/js/jquery.slimscroll.js"></script>
+
+    <!-- Fancy Dropdown JS -->
+    <script src="~/lib/Droopy/dist/js/dropdown-bootstrap-extended.js"></script>
+
+    <!-- Sparkline JavaScript -->
+    <script src="~/lib/Droopy/jquery.sparkline/dist/jquery.sparkline.min.js"></script>
+
+    <!-- Owl JavaScript -->
+    <script src="~/lib/Droopy/bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+    <!-- Switchery JavaScript -->
+    <script src="~/lib/Droopy/bower_components/switchery/dist/switchery.min.js"></script>
+
+    <!-- EChartJS JavaScript -->
+    <script src="~/lib/Droopy/bower_components/echarts/dist/echarts-en.min.js"></script>
+    <script src="~/lib/Droopy/echarts-liquidfill.min.js"></script>
+    <script src="~/lib/mustache/mustache.js"></script>
+    <script src="~/lib/select2/select2.min.js"></script>
+    <script src="~/lib/select2/select2.full.min.js"></script>
+
+    <!--DatePicker-->
+    <script src="~/lib/datetimepicker/dist/datepicker.js"></script>
+    <script src="~/lib/datetimepicker/dist/datepicker.min.js"></script>
+    <script src="~/lib/datetimepicker/dist/js/datepicker.vi-VN.js"></script>
+    <script src="~/lib/dateSelect/dobpicker.js"></script>
+
+    <!--Datatables.net-->
+    <script src="~/lib/datatable/datatables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
+    <script src="~/lib/Droopy/dist/js/jquery.slimscroll.js"></script>
+    <!-- Init JavaScript -->
+    <script src="~/lib/Droopy/dist/js/init.js"></script>
+    <script src="~/lib/twbs-pagination/jquery.twbsPagination.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <script src="~/lib/jquery-validation/localization/messages_vi.js"></script>
+    <script src="~/lib/bootbox/bootbox.js"></script>
+    <script src="~/lib/notifyjs/dist/notify.js"></script>
+    <script src="~/app/shared/utils.js"></script>
+    <script src="~/lib/inputmask/jquery.inputmask.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/Statistic/loader.js"></script>
+    <script src="~/lib/imask/imask.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

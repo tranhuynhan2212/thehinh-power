@@ -1,0 +1,41 @@
+﻿@model List<FunctionViewModel>
+<div class="fixed-sidebar-left">
+    <ul class="nav navbar-nav side-nav nicescroll-bar">
+        @foreach (var parentItem in Model.Where(m => string.IsNullOrEmpty(m.ParentId)))
+        {
+            <li>
+                @if (Model.Any(m => m.ParentId == parentItem.Id))
+                {
+                    @*<a href="javascript:void(0);" data-toggle="collapse" data-target="#@parentItem.Id">
+                        <div class="pull-left">
+                            <i class="@parentItem.IconCss mr-20"></i>
+                            <span class="right-nav-text">@parentItem.Name</span>
+                        </div>
+                        <div class="pull-right"><i class="zmdi zmdi-caret-down"></i></div><div class="clearfix"></div>
+                    </a>
+                    @if (Model.Any(m => m.ParentId == parentItem.Id))
+                    {
+                        <ul id="@parentItem.Id" class="collapse collapse-level-1 two-col-list">
+                            @foreach (var childItem in Model.Where(m => m.ParentId == parentItem.Id))
+                            {
+                                <li>
+                                    <a href="@childItem.URL">@childItem.Name</a>
+                                </li>
+                            }
+                        </ul>
+                    }*@
+                }
+                else
+                {
+                    <a href="@parentItem.URL">
+                        <div class="pull-left">
+                            <span class="@parentItem.IconCss mr-20"></span>
+                            <span class="right-nav-text">@parentItem.Name</span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                }
+            </li>
+        }
+    </ul>
+</div>
