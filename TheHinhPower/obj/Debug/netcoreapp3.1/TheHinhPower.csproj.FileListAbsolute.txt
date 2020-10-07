@@ -472,3 +472,4 @@ C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower\obj\Debug\netcoreapp
 C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower\obj\Debug\netcoreapp3.1\TheHinhPower.dll
 C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower\obj\Debug\netcoreapp3.1\TheHinhPower.pdb
 C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\Users\TUANPC\Desktop\thehinh1\thehinh-power\TheHinhPower\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Product\abc.cshtml.g.cs

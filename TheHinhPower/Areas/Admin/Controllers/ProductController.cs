@@ -30,6 +30,12 @@ namespace TheHinhPower.Areas.Admin.Controllers
         {
             return View();
         }
+        [HttpGet]
+        public IActionResult abc(Guid id)
+        {
+            return View();
+        }
+        //[Route("/Product/AddEdit")]
         [HttpPost]
         public IActionResult AddEdit(ProductViewModel productViewModel)
         {
