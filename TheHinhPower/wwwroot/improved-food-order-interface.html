@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Đặt Món Cải Tiến</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/food-order-buttons.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        .header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .product-card {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .product-info {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .product-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 12px;
+            background: linear-gradient(45deg, #ff9a56, #ff6b35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        
+        .product-details h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .product-price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .toppings {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .topping-tag {
+            background: #fff3cd;
+            color: #856404;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .qty-btn {
+            width: 32px;
+            height: 32px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .qty-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+        
+        .quantity {
+            font-size: 18px;
+            font-weight: bold;
+            min-width: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍵 Đặt Món</h1>
+            <p>Trà đào cam sả thơm ngon</p>
+        </div>
+        
+        <div class="product-card">
+            <div class="product-info">
+                <div class="product-image">
+                    🍵
+                </div>
+                <div class="product-details">
+                    <h3>Tra đào cam sả</h3>
+                    <div class="product-price">140.000đ</div>
+                    <div class="toppings">
+                        <span class="topping-tag">Trân châu trắng</span>
+                        <span class="topping-tag">Trân châu đen</span>
+                        <span class="topping-tag">Pudding trứng</span>
+                        <span class="topping-tag">Kem sữa</span>
+                        <span class="topping-tag">Cookies</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="qty-btn" onclick="changeQuantity(-1)">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <span class="quantity" id="quantity">2</span>
+                        <button class="qty-btn" onclick="changeQuantity(1)">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="action-buttons-container">
+            <div class="total-section">
+                <p class="total-text">Tổng cộng</p>
+                <p class="total-amount" id="totalAmount">280.000 đ</p>
+            </div>
+            
+            <button class="action-button btn-payment" onclick="handlePayment()">
+                <span class="button-icon">
+                    <i class="fas fa-credit-card"></i>
+                </span>
+                YÊU CẦU THANH TOÁN
+            </button>
+            
+            <button class="action-button btn-table" onclick="handleTableReservation()">
+                <span class="button-icon">
+                    <i class="fas fa-utensils"></i>
+                </span>
+                YÊU CẦU ĐẶT BÀN
+            </button>
+            
+            <button class="action-button btn-delivery" onclick="handleDelivery()">
+                <span class="button-icon">
+                    <i class="fas fa-motorcycle"></i>
+                </span>
+                YÊU CẦU GIAO HÀNG
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let quantity = 2;
+        const basePrice = 140000;
+
+        function changeQuantity(change) {
+            quantity = Math.max(1, quantity + change);
+            document.getElementById('quantity').textContent = quantity;
+            updateTotal();
+        }
+
+        function updateTotal() {
+            const total = quantity * basePrice;
+            document.getElementById('totalAmount').textContent = 
+                new Intl.NumberFormat('vi-VN').format(total) + ' đ';
+        }
+
+        function handlePayment() {
+            showNotification('Đang chuyển hướng đến trang thanh toán...', 'payment');
+        }
+
+        function handleTableReservation() {
+            showNotification('Đang mở form đặt bàn...', 'table');
+        }
+
+        function handleDelivery() {
+            showNotification('Đang xử lý yêu cầu giao hàng...', 'delivery');
+        }
+
+        function showNotification(message, type) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                background: ${type === 'payment' ? '#ff9a56' : type === 'table' ? '#667eea' : '#56ab2f'};
+                color: white;
+                border-radius: 12px;
+                box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+                z-index: 1000;
+                transform: translateX(300px);
+                transition: transform 0.3s ease;
+                font-weight: 500;
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+            
+            // Remove after 3 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(300px)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Initialize total
+        updateTotal();
+    </script>
+</body>
+</html>
